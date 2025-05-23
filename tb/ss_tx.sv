@@ -3,7 +3,7 @@
 
 typedef enum {RESET, READ, WRITE, MIXED_RD, BURST, ERR, EDGE} oper_mode;
 
-class mem_tx extends uvm_sequence_item; //Use uvm_sequence_item instead of uvm_transaction
+class ss_tx extends uvm_sequence_item; //Use uvm_sequence_item instead of uvm_transaction
 
     // Rand and non-rand variables
     rand bit [31:0] mem_addr; 

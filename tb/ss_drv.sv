@@ -1,4 +1,4 @@
-class ss_drv extends uvm_driver;
+class ss_drv extends uvm_driver; // this is drv file we are using.
     `uvm_component_utils(ss_drv);
 
     ss_tx tr;

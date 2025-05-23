@@ -19,6 +19,24 @@ The environment is modular, scalable, and reusable, and includes plans for Pytho
 - Assertions and logging integrated in driver/monitor  
 
 ---
+## Test Scenarios Covered
 
-## Directory Structure
+Basic reset test
+Write → Read → Compare
+Burst write sequences
+Mixed read transactions
+Invalid data (X) and error injection
+Edge case addresses: 0x0000_0000, 0xFFFF_FFFF
 
+## Coverage Points
+
+Implemented via ss_cov using uvm_subscriber.
+
+Coverpoints:
+- op, mem_valid, mem_wstrb, mem_addr
+
+Cross coverage:
+- op x mem_valid, op x mem_wstrb
+
+Address buckets:
+- Low, mid, high address space ranges
